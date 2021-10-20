@@ -5,7 +5,7 @@ require_once 'inc/funktionen.inc.php';
 
 $sql = 'SELECT f.*, g.titel AS genre_titel FROM filme f' .
     '  LEFT JOIN genres g ON f.genre_id = g.id' .
-    ' ORDER BY f.titel ASC';
+    ' ORDER BY f.titel';
 
 $statement = $db->query($sql);
 $filme = $statement->fetchAll();
